@@ -1,0 +1,37 @@
+*{box-sizing:border-box}
+body{margin:0;background:#f4f4f4;color:#242424;font-family:Arial,Helvetica,sans-serif}
+.barra{height:68px;background:#171717;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 max(5%,calc((100% - 1120px)/2));border-bottom:3px solid #ef7d22}
+.marca{color:#fff;text-decoration:none;font-size:20px;letter-spacing:-.5px}.marca b{font-weight:400;color:#f28a32}
+.marca-icono{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;background:#ef7d22;border-radius:9px;margin-right:8px;font-weight:bold}
+.usuario{font-size:13px;color:#ddd}
+.contenedor{max-width:1120px;margin:32px auto;padding:0 22px}
+.bienvenida{background:#202020;color:#fff;border-radius:12px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.sobre-titulo{font-size:11px;letter-spacing:1.5px;color:#f28a32;font-weight:bold}
+.bienvenida h1{font-size:27px;margin:10px 0}.bienvenida p{color:#ccc}
+.saldo{min-width:245px;background:#303030;border:1px solid #454545;border-radius:10px;padding:17px 20px;display:flex;flex-direction:column;gap:8px}
+.saldo span{font-size:12px;color:#c7c7c7}.saldo strong{font-size:27px}.saldo small{font-size:12px;color:#ccc}.saldo .etiqueta{color:#f2a15e}
+.seccion{margin-top:27px}.encabezado-seccion{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.encabezado-seccion h2{font-size:19px;margin:0}.encabezado-seccion span{font-size:12px;color:#777}
+.acciones{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.accion{min-height:105px;background:#fff;border:1px solid #e5e5e5;border-radius:10px;color:#292929;text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;padding:17px;font-size:14px;font-family:inherit;cursor:pointer;transition:.15s}
+.accion:hover{border-color:#ef7d22;transform:translateY(-2px)}
+.icono{width:31px;height:31px;display:grid;place-items:center;border-radius:9px;background:#fff0e4;color:#e8751c;font-size:21px}
+.resumen{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px}
+.datos-cuenta{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.datos-cuenta div{display:flex;flex-direction:column;gap:7px}.datos-cuenta span{font-size:12px;color:#777}.datos-cuenta strong{font-size:14px;overflow-wrap:anywhere}
+.tabla-contenedor{background:#fff;border:1px solid #e7e7e7;border-radius:10px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:15px;border-bottom:1px solid #eee;font-size:13px}th{background:#fafafa;color:#666;font-weight:600}tr:last-child td{border-bottom:0}.positivo{color:#24844a;font-weight:bold}.negativo{color:#c45432;font-weight:bold}.vacio{text-align:center;color:#777;padding:25px}
+.alerta{padding:13px 16px;background:#e7f5eb;color:#226b38;border-radius:8px;margin-top:18px;font-size:14px}.alerta-error{background:#fff0ed;color:#a33b28}
+footer{text-align:center;color:#888;font-size:12px;padding:30px 0}
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:10;align-items:center;justify-content:center;padding:18px}.modal.activo{display:flex}
+.modal-caja{background:#fff;border-radius:12px;width:100%;max-width:420px;padding:27px;position:relative;box-shadow:0 15px 45px #0003}
+.modal-caja h2{font-size:21px;margin:0 30px 8px 0}.modal-caja p{font-size:13px;color:#777;line-height:1.5}
+.cerrar{position:absolute;right:16px;top:12px;border:0;background:none;font-size:27px;color:#777;cursor:pointer}
+form{display:flex;flex-direction:column;gap:9px;margin-top:20px}label{font-size:13px;color:#555}
+input,select{padding:12px;border:1px solid #ddd;border-radius:7px;font:14px Arial;margin-bottom:7px;width:100%}
+input:focus,select:focus{outline:1px solid #ef7d22;border-color:#ef7d22}
+.primario{background:#ed7b22;border:0;color:white;padding:12px 16px;border-radius:7px;font-weight:bold;cursor:pointer;margin-top:5px}.primario:hover{background:#d96a17}
+.tarjeta-demo{background:linear-gradient(125deg,#252525,#454545);color:#fff;border-radius:12px;padding:22px;margin:20px 0 12px;min-height:160px;display:flex;flex-direction:column;justify-content:space-between}
+.tarjeta-demo>span{font-size:11px;color:#f4a15f;letter-spacing:1px}.tarjeta-demo strong{font-size:19px;letter-spacing:2px}.tarjeta-demo div{display:flex;justify-content:space-between;font-size:11px}
+.dato-grande{font-size:22px!important;letter-spacing:1px;color:#222!important;background:#f5f5f5;padding:14px;border-radius:7px;overflow-wrap:anywhere}
+.nota{font-size:11px!important}
+@media(max-width:700px){.contenedor{margin:20px auto;padding:0 14px}.bienvenida{align-items:stretch;flex-direction:column;padding:22px}.saldo{min-width:0}.acciones{grid-template-columns:repeat(2,1fr)}.datos-cuenta{grid-template-columns:1fr}.barra{padding:0 16px}.usuario{font-size:11px}}
