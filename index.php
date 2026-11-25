@@ -1,7 +1,21 @@
 <?php
 session_start();
 require_once "config.php";
+// --- BLOQUE TEMPORAL PARA REPARAR LA CONTRASEÑA DEMO ---
+// Entra con: demo@campitos.edu.mx / password123 y luego borra este bloque.
+$correoDemo = "demo@campitos.edu.mx";
+$passwordDemo = "password123";
+$hashReal = password_hash($passwordDemo, PASSWORD_DEFAULT);
 
+$stmtFix = $conexion->prepare(
+    "UPDATE usuarios SET password_hash = ? WHERE correo = ? AND id = 1"
+);
+if ($stmtFix) {
+    $stmtFix->bind_param("ss", $hashReal, $correoDemo);
+    $stmtFix->execute();
+    $stmtFix->close();
+}
+// --- FIN DEL BLOQUE TEMPORAL ---
 // Cerrar sesión
 if (isset($_GET["logout"])) {
     $_SESSION = [];
